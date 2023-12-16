@@ -1,0 +1,4 @@
+config AMPOULE_PROTOS
+    bool "Enables the compilation of ampoule protobuf"
+    default n
+    select NANOPB

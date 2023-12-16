@@ -1,0 +1,6 @@
+name: ampoule-protobuf
+build:
+  cmake: zephyr/.
+  kconfig: zephyr/Kconfig
+  depends:
+    - nanopb
