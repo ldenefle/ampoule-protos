@@ -9,3 +9,7 @@ enum Opcode {
 message Command {
     Opcode opcode = 1;
 }
+
+message Response {
+    Opcode opcode = 1;
+}

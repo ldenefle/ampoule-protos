@@ -6,5 +6,5 @@ if(CONFIG_AMPOULE_PROTOS)
     include(nanopb)
 
     zephyr_nanopb_sources(ampoule_protos ${proto_sources})
-    nanopb_generate_cpp(PROTO_SRCS PROTO_HDRS RELPATH ${proto_sources})
+    zephyr_include_directories(${CMAKE_CURRENT_BINARY_DIR})
 endif()
