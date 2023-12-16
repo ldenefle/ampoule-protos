@@ -1,4 +1,4 @@
-name: ampoule-protobuf
+name: ampoule-protos
 build:
   cmake: zephyr/.
   kconfig: zephyr/Kconfig
