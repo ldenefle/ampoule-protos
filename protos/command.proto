@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package command;
+
 enum Opcode {
     UNUSED = 0;
     PING = 1;
