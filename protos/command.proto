@@ -3,15 +3,27 @@ syntax = "proto3";
 package command;
 
 enum Opcode {
-    UNUSED = 0;
-    PING = 1;
-    PONG = 2;
+  UNUSED = 0;
+  PING = 1;
+  PONG = 2;
+  SET_LED = 3;
+}
+
+message Led {
+  enum Color {
+    OFF = 0;
+    WHITE = 1;
+  }
+  Color color = 1;
+  uint32 index = 2;
 }
 
 message Command {
-    Opcode opcode = 1;
+  Opcode opcode = 1;
+  oneof operation { Led led = 2; }
 }
 
 message Response {
-    Opcode opcode = 1;
+  Opcode opcode = 1;
+  bool success = 2;
 }
